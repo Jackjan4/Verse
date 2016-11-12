@@ -1,0 +1,4 @@
+Zum Ausführen und kompilieren wird mindestens Java 8u40 benötigt.
+
+Dass das Projekt so groß ist (ca. 91mb) liegt an den unkomprimierten Audiodateien.
+JavaFX ist nicht in der Lage standardmäßig komprimierte Dateien(z.B. mp3) zu laden.
