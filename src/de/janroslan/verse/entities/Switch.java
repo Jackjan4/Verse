@@ -3,6 +3,7 @@ package de.janroslan.verse.entities;
 import de.janroslan.versefx.draw.AnimImage;
 import de.janroslan.versefx.physics.Collidable;
 import de.janroslan.versefx.io.InputManager;
+import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
@@ -15,8 +16,9 @@ import javafx.scene.media.AudioClip;
 public class Switch extends AnimImage {
 
     private boolean pushed;
+    
     private EventHandler handler;
-
+    
     private boolean lastKeyDown;
 
     private AudioClip clickSound;
@@ -25,6 +27,7 @@ public class Switch extends AnimImage {
         super("switch", startX, startY, new Image("/de/janroslan/verse/resources/switch.png"), 3, 1, 0.5, 2, 0);
         pushed = false;
         clickSound = new AudioClip(getClass().getResource("/de/janroslan/verse/resources/sounds/click.wav").toString());
+       
     }
 
     
@@ -43,7 +46,6 @@ public class Switch extends AnimImage {
             if (handler != null) {
                 handler.handle(null);
             }
-
         }
 
         if (InputManager.getGlobalInput().IsKeyDown(KeyCode.F)) {
